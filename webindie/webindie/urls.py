@@ -1,22 +1,35 @@
-"""
-URL configuration for webindie project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
+from appliindie import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', views.accueil),
+    path('jeux/', views.jeux),
+    path('jeu/<int:jeu_id>/', views.jeu),
+    path('jeux/add/',views.formulaireCreationJeu),
+    path('jeux/create/',views.creerJeu),
+    path('jeux/<int:jeu_id>/addAvis/', views.ajouterAvisAuJeu),
+    path('jeux/<int:jeu_id>/deleteAvis/<int:avis_id>/',views.supprimerAvisAuJeu),
+    path('jeux/<int:jeu_id>/delete/',views.supprimerJeu),
+    path('jeux/<int:jeu_id>/update/',views.afficherFormulaireModificationJeu),
+    path('jeux/<int:jeu_id>/updated',views.modifierJeu),
+
+    path('avis/', views.avis),
+    path('avi/<int:avis_id>/', views.avi),
+    
+    path('editeurs/', views.editeurs),
+    path('editeur/<int:editeur_id>/', views.editeur),
+    path('editeurs/add/',views.formulaireCreationEditeur),
+    path('editeurs/create/',views.creerEditeur),
+    path('editeurs/<int:editeur_id>/delete/',views.supprimerEditeur),
+    path('editeurs/<int:editeur_id>/update/',views.afficherFormulaireModificationEditeur),
+    path('editeurs/<int:editeur_id>/updated',views.modifierEditeur),
+
+    path('studios/', views.studios),
+    path('studio/<int:studio_id>/', views.studio),
+    path('studios/add/',views.formulaireCreationStudio),
+    path('studios/create/',views.creerStudio),
+    path('studios/<int:studio_id>/delete/',views.supprimerStudio),
+    path('studios/<int:studio_id>/update/',views.afficherFormulaireModificationStudio),
+    path('studios/<int:studio_id>/updated',views.modifierStudio)
 ]

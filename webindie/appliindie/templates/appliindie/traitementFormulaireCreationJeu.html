@@ -1,0 +1,14 @@
+{% extends 'appliindie/base.html' %}
+
+{% block title %}
+Creation d'un jeu
+{% endblock %}
+
+{% block content %}
+    <h2>Creation d'un jeu :</h2>
+    {% if nom != None %}
+        <p>Le jeu {{nom}} a bien ete cree !</p>
+    {% else %}
+        <p>Erreur lors de la creation du jeu : {erreur}</p>
+    {% endif %}
+{% endblock %}

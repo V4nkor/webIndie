@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'appliindie/css/styles.css' %}">
+        <link rel="icon" href="{% static 'appliindie/img/logo.png' %}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="nav-logo-element" href='/'><img class="nav-logo" src="{% static 'appliindie/img/logo.png' %}"></a>
+                <a class="nav-element" href='/jeux/'>Les jeux</a>
+                <a class="nav-element" href='/jeux/add/'>Creer un jeu</a>
+                <a class="nav-element" href='/editeurs/'>Les editeurs</a>
+                <a class="nav-element" href='/editeurs/add/'>Creer un editeur</a>
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            Appli Indie - 2023 - LP PRISM - Mathieu MORGAT
+        </footer>
+    </body>
+</html>

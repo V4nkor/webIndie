@@ -1,0 +1,21 @@
+{% extends 'appliindie/base.html' %}
+{% load static %}
+
+{% block title %}
+Les jeux
+{% endblock %}
+
+{% block content %}
+<h2>Voici les {{ jeux|length }} jeux :</h2>
+<div class="elementGrid">
+    {% for jeu in jeux %}
+        <div class="elementDiv">
+            <img class="elementImage" src="{% static 'appliindie/img/jeu_par_default.jpg' %}">
+            <h4>{{ jeu }}</h4>
+            <a href="/jeux/{{jeu.idJeu}}/"><button class="btn detailsBtn clickable">Details</button></a>
+            <a href="/jeux/{{jeu.idJeu}}/update"><button class="btn modifBtn clickable">Modifier</button></a>
+            <a href="/jeux/{{jeu.idJeu}}/delete"><button class="btn deleteBtn clickable">Supprimer</button></a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,152 @@
+/** General section */
+
+    html, body{
+        padding: 0;
+        margin: 0;
+    }
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        min-height: 100%;
+    }
+
+    main{
+        margin-left:20px;
+    }
+
+    footer{
+        text-align:center;
+        background-color: #6c93ac;
+        padding:12px;
+        margin-top:30px;
+    }
+
+    .clickable:hover{
+        cursor:pointer;
+    }
+
+/* End of general section */
+
+/** Nav section */
+
+    nav {
+        background-color: #007eb9;
+        overflow: hidden;
+    }
+    .nav-logo{
+        width:40px;
+    }
+
+    .nav-element, .nav-logo-element{
+        float: left;
+        background-color: #007eb9;
+        color: #000000;
+        text-align: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .nav-logo-element{
+        height:40px;
+    }
+    .nav-element{
+        padding:10px;
+        height:20px;
+    }
+    nav a:hover {
+        background-color: #006a9b;
+        color: black;
+    }
+    nav a.active {
+        background-color: #0497aa;
+        color: rgb(0, 0, 0);
+    }
+
+/* End of nav section */
+
+/** ElementList  section */
+
+    .elementsList, .elementsList td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        text-align:center;
+    }
+
+    .elementsList td{
+        padding:4px;
+    }
+
+    .elementsList thead {
+        background-color: #008eb9;
+        color: #000000;
+    }
+
+/** Element grid section */
+
+    .elementGrid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px;
+        grid-auto-rows: minmax(100px, auto);
+        margin-right:20px;
+    }
+
+    .elementDiv{
+        text-align: center;
+        margin-top:15px;
+        background-color: rgb(235, 235, 235);
+        border:solid black 1px;
+        padding:10px;
+    }
+
+    .elementImage{
+        max-width: 200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+/* End of element grid section */
+
+/** Button section */
+
+    .btn{
+        border-radius: 15%;
+        padding:5px;
+        border: solid black 1px;
+    }
+
+    .detailsBtn{
+        background-color: rgb(126, 197, 255);
+        
+    }
+    .modifBtn{
+        background-color: rgb(126, 197, 255);
+    }
+    .deleteBtn{
+        background-color: rgb(255, 63, 63);
+    }
+
+    .submitBtn{
+        background-color: #3bb900;
+    }
+
+/* End of Button section */
+
+/** Form section */
+
+    .formDiv{
+        margin-left :auto;
+        margin-right:auto;
+        width: fit-content;
+        background-color: rgb(235, 235, 235);
+        border:solid black 1px;
+        padding:20px;
+    }
+
+    .formDiv input{
+        margin-top:10px;
+    }
+
+/* End of Form section */
