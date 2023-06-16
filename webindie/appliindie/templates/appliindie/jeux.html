@@ -17,5 +17,12 @@ Les jeux
             <a href="/jeux/{{jeu.idJeu}}/delete"><button class="btn deleteBtn clickable">Supprimer</button></a>
         </div>
     {% endfor %}
+
+    Test jeux : 
+
+    <div class="jeuDiv" onclick="location.href = '/jeux/{{jeu.idJeu}}'">
+        <img class="jeuImage" src="{% static 'appliindie/img/default_game.png' %}">
+        <h3 class="jeuTitre">Deep rock galactic</h3>
+    </div>
 </div>
 {% endblock %}

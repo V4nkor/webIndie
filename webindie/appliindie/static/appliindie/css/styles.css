@@ -107,6 +107,32 @@
         margin-right:auto;
     }
 
+    .jeuDiv{
+        transition: transform .2s; /* Animation */
+        text-align: center;
+        margin-top:15px;
+        background-color: rgb(235, 235, 235);
+        border:solid black 1px;
+        height:250px;
+        width: 400px;
+    }
+
+    .jeuImage{
+        width: 100%;
+        height:200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .jeuDiv:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .jeuTitre{
+        color:black;
+    }
+
 /* End of element grid section */
 
 /** Button section */
